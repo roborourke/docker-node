@@ -17,6 +17,9 @@ https://${GIT_TOKEN}@github.com/${GIT_REPO}.git
 
 You can generate the token at https://github.com/settings/tokens
 
+Optionally you can pass in a `GIT_BRANCH` environment variable too. It defaults
+to `master`.
+
 On the topic of security the `CMD` uses the recommended `git init && git pull`
 pattern so that no tokens are written to the disk at any point.
 
