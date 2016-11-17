@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6
+FROM alpine:latest
 MAINTAINER Robert O\'Rourke "rob@o-rourke.org"
 
 # The repo to clone in the format `user/repo`
@@ -10,7 +10,7 @@ ENV GIT_TOKEN null
 # Optional branch, defaults to master
 ENV GIT_BRANCH master
 
-RUN apk add --update --no-cache build-base git openssh
+RUN apk add --update --no-cache build-base nodejs git openssh
 
 RUN mkdir /var/app
 WORKDIR /var/app
